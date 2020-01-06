@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01-Junit/01-Junit.iml" filepath="$PROJECT_DIR$/01-Junit/01-Junit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-Reflect/02-Reflect.iml" filepath="$PROJECT_DIR$/02-Reflect/02-Reflect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03-Annotation/03-Annotation.iml" filepath="$PROJECT_DIR$/03-Annotation/03-Annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04-JDBC/04-JDBC.iml" filepath="$PROJECT_DIR$/04-JDBC/04-JDBC.iml" />
+    </modules>
+  </component>
+</project>
