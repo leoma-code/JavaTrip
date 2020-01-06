@@ -42,7 +42,7 @@ public class JDBCDemo5 {
 
             conn.commit();
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
             e.printStackTrace();
             if (conn != null) {
                 try {
