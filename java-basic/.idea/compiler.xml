@@ -67,7 +67,7 @@
       <module name="04-FuncationalInterface" target="1.8" />
       <module name="04-JDK8" target="1.8" />
       <module name="fileAndIO" target="1.8" />
-      <module name="java-basic" target="1.8" />
+      <module name="java-basic" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
