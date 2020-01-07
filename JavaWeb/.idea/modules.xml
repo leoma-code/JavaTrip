@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/04-JDBC/04-JDBC.iml" filepath="$PROJECT_DIR$/04-JDBC/04-JDBC.iml" />
       <module fileurl="file://$PROJECT_DIR$/05-Datasource/05-Datasource.iml" filepath="$PROJECT_DIR$/05-Datasource/05-Datasource.iml" />
       <module fileurl="file://$PROJECT_DIR$/06-HTML&amp;CSS/06-HTML&amp;CSS.iml" filepath="$PROJECT_DIR$/06-HTML&amp;CSS/06-HTML&amp;CSS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07-JavaScript/07-JavaScript.iml" filepath="$PROJECT_DIR$/07-JavaScript/07-JavaScript.iml" />
     </modules>
   </component>
 </project>
