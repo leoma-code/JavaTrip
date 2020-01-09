@@ -12,6 +12,8 @@
       <module fileurl="file://$PROJECT_DIR$/08-BootStrap/08-BootStrap.iml" filepath="$PROJECT_DIR$/08-BootStrap/08-BootStrap.iml" />
       <module fileurl="file://$PROJECT_DIR$/09-XML/09-XML.iml" filepath="$PROJECT_DIR$/09-XML/09-XML.iml" />
       <module fileurl="file://$PROJECT_DIR$/10-Tomcat/10-Tomcat.iml" filepath="$PROJECT_DIR$/10-Tomcat/10-Tomcat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/11-Servlet/11-Servlet.iml" filepath="$PROJECT_DIR$/11-Servlet/11-Servlet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/12-Servlet3.0/12-Servlet3.0.iml" filepath="$PROJECT_DIR$/12-Servlet3.0/12-Servlet3.0.iml" />
     </modules>
   </component>
 </project>
