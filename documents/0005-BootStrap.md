@@ -1,4 +1,4 @@
-## Bootstrap：
+#### Bootstrap：
 
 ​	1. 概念： 一个前端开发的框架，Bootstrap，来自 Twitter，是目前很受欢迎的前端框架。Bootstrap 是基于 HTML、CSS、JavaScript 的，它简洁灵活，使得 Web 开发更加快捷。
 
@@ -46,7 +46,7 @@
 
 
 
-##响应式布局
+#### 响应式布局
 
 ​	* 同一套页面可以兼容不同分辨率的设备。
 
@@ -86,7 +86,7 @@
 
 
 
-##CSS样式和JS插件
+#### CSS样式和JS插件
 
 ​	1. 全局CSS样式：
 

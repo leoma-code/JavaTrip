@@ -11,7 +11,7 @@
 
     数据库操作语言，用来对数据库中表的数据进行增删改。
     关键字：`insert、delete、update等`
-    
+
 ###### 3. DQL(Date Query Language)<br>
 
     数据库查询语言，用来查询数据表中的数据。
@@ -25,7 +25,7 @@
 ##### 三、DDL:操作数据库、表
 
 ###### 操作数据库
-    
+
     1. C (Create)：创建
         * 创建数据库
             * create database 数据库名称;
@@ -49,7 +49,7 @@
             * select database();
         * 使用数据库
             * use db1;
----     
+---
 ###### 操作表
     1. C (Create)：创建
         * 语法
@@ -126,7 +126,7 @@
         * update 表名 set 列名1 = 值1, 列名2 = 值2 [where 条件];
         * 注意
             如果不加条件将会把表中所有记录修改
----  
+---
 ##### DQL：查询表中数据
 - 语法：<br>
 ```
@@ -144,7 +144,7 @@
         排序
     limit
         分页限定
-```    
+```
 ```
     1. 去重
         * SELECT DISTINCT name FROM stu;
@@ -170,7 +170,7 @@
     SELECT * FROM stu WHERE name LIKE '%张%';
     SELECT * FROM stu WHERE name LIKE '__'; # _ 表示任意
 ```
-    
+
 
 - 1. 排序查询
     * 语法：`order by` 子句
@@ -213,8 +213,7 @@
         - limit 开始索引, 每页查询的条数;
         - `SELECT * FROM stu LIMIT 0, 2;`
 
-
---- 
+---
 ##### 约束
 - 概念：对标中的数据进行限定，保证数据的正确性、有效性和完整性
 - 分类：
@@ -251,7 +250,7 @@
             ```
             ALTER TABLE student MODIFY id INT;
             ```
-            
+        
     - 非空约束 `not null`
         1. 创建表的时候添加
         ```
@@ -266,7 +265,7 @@
         alter table student modify name varchar(20) not null; #添加
         ```
     - 唯一约束 `unique`
-       
+      
         1. 创建表的时候添加
         ```
             CREATE TABLE student (
@@ -346,7 +345,6 @@
                     constraint emp_depid_fk foreign key (dep_id) references department(id) on update cascade on delete cascade
                 )
                 ```
-
 
 ---
 #### 数据库设计
@@ -516,18 +514,17 @@
             dept_id int,
             foreign key (dept_id) references dept(id) -- 外键，关联部门表(部门表的主键)
         );
-    
+        
         insert into emp(name,gender,salary,join_date,dept_id) values('孙悟空','男 ',7200,'2013-02-24',1);
         insert into emp(name,gender,salary,join_date,dept_id) values('猪八戒','男 ',3600,'2010-12-02',2);
         insert into emp(name,gender,salary,join_date,dept_id) values('唐僧','男',9000,'2008-08-08',2);
         insert into emp(name,gender,salary,join_date,dept_id) values('白骨精','女 ',5000,'2015-10-07',3);
         insert into emp(name,gender,salary,join_date,dept_id) values('蜘蛛精','女 ',4500,'2011-03-14',1);
-    
+        
         SELECT * FROM dept;
         SELECT * FROM emp;
         SELECT * FROM emp, dept; -- 笛卡尔积现象
-      
-
+    
 - 多表查询分类
     - 内连接查询：
         - 查询的是两表交集部分
@@ -607,7 +604,7 @@
             - 子查询结果是单行单列的：
             ```
             子查询可以作为条件，使用运算符判断
-           
+              
             -- 查询工资小于平均工资的人
             SELECT 
             	*
@@ -920,9 +917,9 @@ ON
 		2. DML：增删改表中数据
 		3. DQL：查询表中数据
 		4. DCL：管理用户，授权
-
+	
 	* DBA：数据库管理员
-
+	
 	* DCL：管理用户，授权
 		1. 管理用户
 			1. 添加用户：
@@ -936,11 +933,11 @@ ON
 				
 				SET PASSWORD FOR '用户名'@'主机名' = PASSWORD('新密码');
 				SET PASSWORD FOR 'root'@'localhost' = PASSWORD('123');
-
+	
 				* mysql中忘记了root用户的密码？
 					1. cmd -- > net stop mysql 停止mysql服务
 						* 需要管理员运行该cmd
-
+	
 					2. 使用无验证方式启动mysql服务： mysqld --skip-grant-tables
 					3. 打开新的cmd窗口,直接输入mysql命令，敲回车。就可以登录成功
 					4. use mysql;
@@ -956,13 +953,13 @@ ON
 				SELECT * FROM USER;
 				
 				* 通配符： % 表示可以在任意主机使用用户登录数据库
-
+	
 		2. 权限管理：
 			1. 查询权限：
 				-- 查询权限
 				SHOW GRANTS FOR '用户名'@'主机名';
 				SHOW GRANTS FOR 'lisi'@'%';
-
+	
 			2. 授予权限：
 				-- 授予权限
 				grant 权限列表 on 数据库名.表名 to '用户名'@'主机名';

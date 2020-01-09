@@ -1,4 +1,4 @@
-###Servlet： server applet
+#### Servlet： server applet
 
 - 概念：运行在服务器端的小程序
   - Servlet就是一个接口，定义了Java类被浏览器访问到(tomcat识别)的规则。
@@ -47,7 +47,7 @@
 
 ---
 
-####Servlet中的生命周期方法：
+#### Servlet中的生命周期方法：
 
 - 被创建：执行init方法，只执行一次
 
@@ -68,8 +68,6 @@
 
 > Servlet的init方法，只执行一次，说明一个Servlet在内存中只存在一个对象，Servlet是单例的
 
-​			* Servlet的init方法，只执行一次，说明一个Servlet在内存中只存在一个对象，Servlet是单例的
-
 > > 多个用户同时访问时，可能存在线程安全问题。
 
 > > 解决：尽量不要在Servlet中定义成员变量。即使定义了成员变量，也不要对修改值
@@ -86,7 +84,7 @@
 
 ---
 
-###Servlet3.0：
+####  Servlet3.0：
 
 - 好处：
   -  支持注解配置。可以不需要web.xml了。
@@ -122,11 +120,9 @@ public @interface WebServlet {
 
 ```
 
-
-
 ---
 
-###Servlet的体系结构	
+#### Servlet的体系结构
 
 ​		Servlet -- 接口
 
@@ -147,7 +143,7 @@ public @interface WebServlet {
 
 ​	
 
-#####Servlet相关配置
+##### Servlet相关配置
 
 - urlpartten:Servlet访问路径
   - 一个Servlet可以定义多个访问路径 ： `@WebServlet({"/d4","/dd4","/ddd4"})`
@@ -164,7 +160,7 @@ public @interface WebServlet {
 
 ---
 
-###IDEA与tomcat的相关配置
+#### IDEA与tomcat的相关配置
 
 - **IDEA会为每一个tomcat部署的项目单独建立一份配置文件**
   - 查看控制台的log：Using CATALINA_BASE:  "C:\Users\fqy\.IntelliJIdea2018.1\system\tomcat\_itcast"

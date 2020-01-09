@@ -226,40 +226,42 @@
       -  type属性：
 
         - text：文本输入框，默认值
+          
           - placeholder：指定输入框的提示信息，当输入框的内容发生变化，会自动清空提示信息
         - password：密码输入框
-        - radio:单选框
-
-        -  checkbox：复选框
-
+  - radio:单选框
+        
+  -  checkbox：复选框
+        
           > **radio**    **checkbox**
           >
           > 注意：
           >
           > 1. 要想让多个单选框实现单选的效果，则多个单选框的name属性值必须一样
           > 2. 一般会给每一个单选框提供value属性，指定其被选中后提交的值
-          > 3.  checked属性，可以指定默认值
-
-        - file：文件选择框
-
+    > 3.  checked属性，可以指定默认值
+        
+  - file：文件选择框
+        
         - hidden：隐藏域，用于提交一些信息。
         - 按钮：
           - submit：提交按钮。可以提交表单
           - button：普通按钮
           - image：图片提交按钮
-            - src属性指定图片的路径	
-
-    - label：指定输入项的文字描述信息
-
+        - src属性指定图片的路径	
+    
+- label：指定输入项的文字描述信息
+    
       > 注意：
       >
       > label的for属性一般会和 input 的 id属性值 对应。如果对应了，则点击label区域，会让input输入框获取焦点。
       >
       > ```
       > <label for="username">用户名：<label><input id="username" type="text" placeholder="请输入用户名">
-      > ```
-
+  > ```
+    
     - select: 下拉列表
+      
       - 子元素：option，指定列表项
     -  textarea：文本域
       - cols：指定列数，每一行有多少个字符
@@ -267,7 +269,7 @@
 
 ---
 
-### CSS：页面美化和布局控制
+#### CSS：页面美化和布局控制
 
 - 概念：` Cascading Style Sheets `层叠样式表
 
