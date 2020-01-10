@@ -15,6 +15,7 @@
       <module fileurl="file://$PROJECT_DIR$/11-Servlet/11-Servlet.iml" filepath="$PROJECT_DIR$/11-Servlet/11-Servlet.iml" />
       <module fileurl="file://$PROJECT_DIR$/12-Servlet3.0/12-Servlet3.0.iml" filepath="$PROJECT_DIR$/12-Servlet3.0/12-Servlet3.0.iml" />
       <module fileurl="file://$PROJECT_DIR$/13-HTTP/13-HTTP.iml" filepath="$PROJECT_DIR$/13-HTTP/13-HTTP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/14-HTTP-Response/14-HTTP-Response.iml" filepath="$PROJECT_DIR$/14-HTTP-Response/14-HTTP-Response.iml" />
     </modules>
   </component>
 </project>
