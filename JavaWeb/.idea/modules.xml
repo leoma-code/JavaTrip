@@ -17,6 +17,7 @@
       <module fileurl="file://$PROJECT_DIR$/13-HTTP/13-HTTP.iml" filepath="$PROJECT_DIR$/13-HTTP/13-HTTP.iml" />
       <module fileurl="file://$PROJECT_DIR$/14-HTTP-Response/14-HTTP-Response.iml" filepath="$PROJECT_DIR$/14-HTTP-Response/14-HTTP-Response.iml" />
       <module fileurl="file://$PROJECT_DIR$/15-Cookie&amp;Session/15-Cookie&amp;Session.iml" filepath="$PROJECT_DIR$/15-Cookie&amp;Session/15-Cookie&amp;Session.iml" />
+      <module fileurl="file://$PROJECT_DIR$/16-JSP&amp;EL&amp;JSTL/16-JSP&amp;EL&amp;JSTL.iml" filepath="$PROJECT_DIR$/16-JSP&amp;EL&amp;JSTL/16-JSP&amp;EL&amp;JSTL.iml" />
     </modules>
   </component>
 </project>

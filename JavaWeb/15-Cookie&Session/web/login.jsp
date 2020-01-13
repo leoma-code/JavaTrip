@@ -20,7 +20,7 @@
 </head>
 <body>
 
-<form action="/cookie/login" method="post">
+<form action="${pageContext.request.contextPath}/login" method="post">
 
     <table>
         <tr>
@@ -36,7 +36,7 @@
             <td><input type="text" placeholder="请输入验证码" name="checkCode"></td>
         </tr>
         <tr>
-            <td colspan="2"><img id="img" src="/cookie/checkCode" alt=""></td>
+            <td colspan="2"><img id="img" src="${pageContext.request.contextPath}/checkCode" alt=""></td>
         </tr>
         <tr>
             <td><input type="submit" value="提交"></td>
