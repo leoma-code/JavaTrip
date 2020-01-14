@@ -20,6 +20,7 @@
       <module fileurl="file://$PROJECT_DIR$/16-JSP&amp;EL&amp;JSTL/16-JSP&amp;EL&amp;JSTL.iml" filepath="$PROJECT_DIR$/16-JSP&amp;EL&amp;JSTL/16-JSP&amp;EL&amp;JSTL.iml" />
       <module fileurl="file://$PROJECT_DIR$/17-Filter&amp;Listener/17-Filter&amp;Listener.iml" filepath="$PROJECT_DIR$/17-Filter&amp;Listener/17-Filter&amp;Listener.iml" />
       <module fileurl="file://$PROJECT_DIR$/18-JQuery/18-JQuery.iml" filepath="$PROJECT_DIR$/18-JQuery/18-JQuery.iml" />
+      <module fileurl="file://$PROJECT_DIR$/19-Ajax&amp;Json/19-Ajax&amp;Json.iml" filepath="$PROJECT_DIR$/19-Ajax&amp;Json/19-Ajax&amp;Json.iml" />
     </modules>
   </component>
 </project>
