@@ -19,6 +19,7 @@
       <module fileurl="file://$PROJECT_DIR$/15-Cookie&amp;Session/15-Cookie&amp;Session.iml" filepath="$PROJECT_DIR$/15-Cookie&amp;Session/15-Cookie&amp;Session.iml" />
       <module fileurl="file://$PROJECT_DIR$/16-JSP&amp;EL&amp;JSTL/16-JSP&amp;EL&amp;JSTL.iml" filepath="$PROJECT_DIR$/16-JSP&amp;EL&amp;JSTL/16-JSP&amp;EL&amp;JSTL.iml" />
       <module fileurl="file://$PROJECT_DIR$/17-Filter&amp;Listener/17-Filter&amp;Listener.iml" filepath="$PROJECT_DIR$/17-Filter&amp;Listener/17-Filter&amp;Listener.iml" />
+      <module fileurl="file://$PROJECT_DIR$/18-JQuery/18-JQuery.iml" filepath="$PROJECT_DIR$/18-JQuery/18-JQuery.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>遍历</title>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+    <ul>
+        <li>北京</li>
+        <li>上海</li>
+        <li>广州</li>
+        <li>深圳</li>
+    </ul>
+
+
+</body>
+
+<script>
+
+    var lis = $("ul li");
+
+    console.log("1. js for循环")
+    for (var i = 0; i < lis.length; i++) {
+        console.log($(lis[i]).text());
+    }
+
+    console.log("2. jq each");
+
+    lis.each(function (index, el) {
+        console.log(index  + "-" + $(el).text());
+    });
+
+
+    $.each(lis, function (index, el) {
+        console.log(index  + "-" + $(el).text());
+    })
+
+    console.log("3. jq for of");
+    for(el of lis) {
+        console.log($(el).text());
+    }
+
+
+</script>
+</html>

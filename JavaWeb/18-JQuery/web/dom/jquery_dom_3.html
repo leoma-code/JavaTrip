@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery-Dom</title>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+    <ul>
+        <li id="bj" name="beijing" xxx="yyyy">北京</li>
+        <li id="sh" name="shanghai">上海</li>
+    </ul>
+    <input id="myinput" type="checkbox" name="hobby">
+
+</body>
+
+<script>
+
+    // 新增class
+    $("#bj").addClass("bj");
+    alert($("#bj").prop("class"));
+
+    $("#bj").removeClass("bj");
+    alert($("#bj").prop("class"));
+
+
+    $("#bj").toggleClass("one");
+    alert($("#bj").prop("class"));
+
+
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery-Dom</title>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+
+    <ul>
+        <li id="bj" name="beijing" xxx="yyyy">北京</li>
+        <li id="sh" name="shanghai">上海</li>
+    </ul>
+    <input id="myinput" type="checkbox" name="hobby">
+
+</body>
+
+<script>
+
+    var name = $("#bj").attr("name");
+    alert(name);
+
+    $("#bj").attr("name", "dabeijing");
+    alert($("#bj").attr("name"));
+
+    // 新增自定义属性
+    $("#bj").attr("description", "didu");
+
+
+    var prop = $("#myinput").prop("name");
+    alert(prop);
+
+
+    /**
+     * attr和prop区别？
+
+     1. 如果操作的是元素的固有属性，则建议使用prop
+     2. 如果操作的是元素自定义的属性，则建议使用attr
+     */
+</script>
+</html>
