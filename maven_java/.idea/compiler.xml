@@ -22,10 +22,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="maven_java" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="21-maven" target="1.5" />
+      <module name="maven_java" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
