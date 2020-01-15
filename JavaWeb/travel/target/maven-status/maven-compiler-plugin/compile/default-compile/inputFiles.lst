@@ -1,0 +1,13 @@
+/Users/leo/Desktop/JavaTrip/JavaWeb/travel/src/main/java/cn/leo/travel/domain/Favorite.java
+/Users/leo/Desktop/JavaTrip/JavaWeb/travel/src/main/java/cn/leo/travel/domain/Category.java
+/Users/leo/Desktop/JavaTrip/JavaWeb/travel/src/main/java/cn/leo/travel/util/UuidUtil.java
+/Users/leo/Desktop/JavaTrip/JavaWeb/travel/src/main/java/cn/leo/travel/domain/ResultInfo.java
+/Users/leo/Desktop/JavaTrip/JavaWeb/travel/src/main/java/cn/leo/travel/util/JDBCUtils.java
+/Users/leo/Desktop/JavaTrip/JavaWeb/travel/src/main/java/cn/leo/travel/domain/Route.java
+/Users/leo/Desktop/JavaTrip/JavaWeb/travel/src/main/java/cn/leo/travel/web/servlet/CheckCodeServlet.java
+/Users/leo/Desktop/JavaTrip/JavaWeb/travel/src/main/java/cn/leo/travel/util/MailUtils.java
+/Users/leo/Desktop/JavaTrip/JavaWeb/travel/src/main/java/cn/leo/travel/domain/RouteImg.java
+/Users/leo/Desktop/JavaTrip/JavaWeb/travel/src/main/java/cn/leo/travel/util/Md5Util.java
+/Users/leo/Desktop/JavaTrip/JavaWeb/travel/src/main/java/cn/leo/travel/domain/Seller.java
+/Users/leo/Desktop/JavaTrip/JavaWeb/travel/src/main/java/cn/leo/travel/util/JedisUtil.java
+/Users/leo/Desktop/JavaTrip/JavaWeb/travel/src/main/java/cn/leo/travel/domain/User.java
