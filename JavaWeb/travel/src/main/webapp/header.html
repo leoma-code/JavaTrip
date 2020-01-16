@@ -4,7 +4,7 @@
 
     $(function () {
 
-        $.get("findUserServlet", {}, function (data) {
+        $.get("user/findOne", {}, function (data) {
             var msg = "欢迎回来，" + data.name;
             $("#name").html(msg);
         });
@@ -28,7 +28,7 @@
             	
                 <span id="name" style="color: #f40; font-weight: 600;"></span>
                 <a href="myfavorite.html" class="collection">我的收藏</a>
-                <a href="javascript:location.href='existServlet';">退出</a>
+                <a href="javascript:location.href='user/exit';">退出</a>
             </div>
         </div>
         <div class="header_wrap">

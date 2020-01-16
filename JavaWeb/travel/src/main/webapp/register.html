@@ -144,7 +144,7 @@
 						var params = $(this).serialize();
 						console.log(params); //action=register&username=aaaaaaaaa&password=a88888888&email=leo%40163.com&name=Leo&telephone=18682312985&sex=%E7%94%B7&birthday=2020-01-15&check=f37a
 
-						$.post("registerUserServlet", params, function (data) {
+						$.post("user/register", params, function (data) {
 							if (data.flag) { // 注册成功
 								location.href = "register_ok.html";
 							} else { //注册失败
