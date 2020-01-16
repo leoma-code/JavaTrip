@@ -1,4 +1,18 @@
 <!-- 头部 start -->
+
+<script>
+
+    $(function () {
+
+        $.get("findUserServlet", {}, function (data) {
+            var msg = "欢迎回来，" + data.name;
+            $("#name").html(msg);
+        });
+
+    });
+
+</script>
+
     <header id="header">
         <div class="top_banner">
             <img src="images/top_banner.jpg" alt="">
@@ -12,9 +26,9 @@
             <!-- 登录状态  -->
             <div class="login">
             	
-                <span>欢迎回来，admin</span>
+                <span id="name" style="color: #f40; font-weight: 600;"></span>
                 <a href="myfavorite.html" class="collection">我的收藏</a>
-                <a href="javascript:;">退出</a>
+                <a href="javascript:location.href='existServlet';">退出</a>
             </div>
         </div>
         <div class="header_wrap">
@@ -23,7 +37,7 @@
                 <div class="search">
                     <input name="" type="text" placeholder="请输入路线名称" class="search_input" autocomplete="off">
                     <a href="javascript:;" class="search-button">搜索</a>
-                </div>
+                </div>s
                 <div class="hottel">
                     <div class="hot_pic">
                         <img src="images/hot_tel.jpg" alt="">
