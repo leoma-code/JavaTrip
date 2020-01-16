@@ -81,7 +81,7 @@ public class RegisterUserServlet extends HttpServlet{
         String checkcode = req.getParameter("check");
         HttpSession session = req.getSession();
         String checkcode_server = (String) session.getAttribute("CHECKCODE_SERVER");
-        return checkcode_server != null && checkcode_server.equals(checkcode);
+        return checkcode_server != null && checkcode_server.equalsIgnoreCase(checkcode);
     }
 
 

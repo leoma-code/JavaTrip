@@ -9,9 +9,10 @@ cn/leo/travel/service/impl/UserServiceImpl.class
 cn/leo/travel/domain/User.class
 cn/leo/travel/domain/Route.class
 cn/leo/travel/dao/UserDao.class
-cn/leo/travel/util/UuidUtil.class
+cn/leo/travel/web/servlet/ActiveUserServlet.class
 cn/leo/travel/domain/RouteImg.class
 cn/leo/travel/domain/Seller.class
+cn/leo/travel/util/UUIDUtils.class
 cn/leo/travel/web/servlet/CheckCodeServlet.class
 cn/leo/travel/service/UserService.class
 cn/leo/travel/util/JedisUtil.class

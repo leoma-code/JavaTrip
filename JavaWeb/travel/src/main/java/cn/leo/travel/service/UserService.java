@@ -13,4 +13,10 @@ public interface UserService {
      * @return
      */
     boolean register(User user);
+
+    /**
+     * 根据激活码激活用户
+     * @return
+     */
+    boolean active(String code);
 }
