@@ -4,9 +4,24 @@
 
     $(function () {
 
+        // 查询展示登陆用户信息
         $.get("user/findOne", {}, function (data) {
-            var msg = "欢迎回来，" + data.name;
+            var msg = data == null ? "" : "欢迎回来，" + data.name;
             $("#name").html(msg);
+        });
+
+        // 查询展示分类
+        $.get("category/findAll", {}, function (data) {
+
+            var lis = '<li class="nav-active"><a href="index.html">首页</a></li>';
+
+            $.each(data, function (index, category) {
+                lis += '<li><a href="route_list.html">' + category.cname + '</a></li>';
+            });
+
+            lis += '<li><a href="favoriterank.html">收藏排行榜</a></li>';
+
+            $("#category").html(lis);
         });
 
     });
@@ -53,8 +68,8 @@
     <!-- 头部 end -->
      <!-- 首页导航 -->
     <div class="navitem">
-        <ul class="nav">
-            <li class="nav-active"><a href="index.html">首页</a></li>
+        <ul class="nav" id="category">
+           <!-- <li class="nav-active"><a href="index.html">首页</a></li>
             <li><a href="route_list.html">门票</a></li>
             <li><a href="route_list.html">酒店</a></li>
             <li><a href="route_list.html">香港车票</a></li>
@@ -63,7 +78,7 @@
             <li><a href="route_list.html">港澳游</a></li>
             <li><a href="route_list.html">抱团定制</a></li>
             <li><a href="route_list.html">全球自由行</a></li>
-            <li><a href="favoriterank.html">收藏排行榜</a></li>
+            <li><a href="favoriterank.html">收藏排行榜</a></li>-->
         </ul>
     </div>
     

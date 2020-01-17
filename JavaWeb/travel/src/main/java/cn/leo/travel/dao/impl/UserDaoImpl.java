@@ -2,7 +2,7 @@ package cn.leo.travel.dao.impl;
 
 import cn.leo.travel.dao.UserDao;
 import cn.leo.travel.domain.User;
-import cn.leo.travel.util.JDBCUtils;
+import cn.leo.travel.utils.JDBCUtils;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;

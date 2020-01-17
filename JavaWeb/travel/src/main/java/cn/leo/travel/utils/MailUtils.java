@@ -1,4 +1,4 @@
-package cn.leo.travel.util;
+package cn.leo.travel.utils;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;

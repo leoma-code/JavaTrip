@@ -4,8 +4,8 @@ import cn.leo.travel.dao.UserDao;
 import cn.leo.travel.dao.impl.UserDaoImpl;
 import cn.leo.travel.domain.User;
 import cn.leo.travel.service.UserService;
-import cn.leo.travel.util.MailUtils;
-import cn.leo.travel.util.UUIDUtils;
+import cn.leo.travel.utils.MailUtils;
+import cn.leo.travel.utils.UUIDUtils;
 
 /**
  * Created by Leo on 2020/1/15.

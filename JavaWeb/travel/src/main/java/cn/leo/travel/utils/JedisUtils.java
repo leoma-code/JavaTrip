@@ -1,4 +1,4 @@
-package cn.leo.travel.util;
+package cn.leo.travel.utils;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
@@ -11,7 +11,7 @@ import java.util.Properties;
 /**
  * Jedis工具类
  */
-public final class JedisUtil {
+public final class JedisUtils {
     private static JedisPool jedisPool;
 
     static {
