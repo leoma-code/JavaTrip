@@ -6,6 +6,7 @@ import cn.leo.travel.domain.Category;
 import cn.leo.travel.service.CategoryService;
 import cn.leo.travel.utils.JedisUtils;
 import redis.clients.jedis.Jedis;
+import redis.clients.jedis.Tuple;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,10 +25,12 @@ public class CategoryServiceImpl implements CategoryService {
 
         // 对分类数据使用Redis缓存优化
         Jedis jedis = JedisUtils.getJedis();
-        Set<String> categories = jedis.zrange("category", 0, -1);
+//        Set<String> categories = jedis.zrange("category", 0, -1);
+        // 查询sortedSet中的分数和值
+        Set<Tuple> tuples = jedis.zrangeWithScores("category", 0, -1);
 
         List<Category> categoryList = null;
-        if (categories == null || categories.size() == 0) {
+        if (tuples == null || tuples.size() == 0) {
             System.out.println("从数据库中中加载数据。。。");
 
             // 从数据库中查询分类
@@ -42,9 +45,10 @@ public class CategoryServiceImpl implements CategoryService {
 
             categoryList = new ArrayList<Category>();
 
-            for (String name : categories) {
+            for (Tuple tuple : tuples) {
                 Category category = new Category();
-                category.setCname(name);
+                category.setCid((int) tuple.getScore());
+                category.setCname(tuple.getElement());
                 categoryList.add(category);
             }
         }

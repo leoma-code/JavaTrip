@@ -9,7 +9,111 @@
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" href="css/search.css">
     <script src="js/jquery-3.3.1.js"></script>
+
+    <script>
+
+        $(function () {
+
+            // 获取参数字符串
+            var search = location.search; //?cid=5
+            // 获取cid
+            var cid = search.split("=")[1];
+
+            load(cid);
+
+        });
+
+
+        function load(cid, currentPage) {
+
+            $.post("route/pageQuery", {cid: cid, currentPage: currentPage}, function(pageBean) {
+
+                $("#total-page").html(pageBean.totalPage);
+                $("#total-size").html(pageBean.totalSize);
+
+                // 旅游线路数据
+                var routeLis = "";
+                $.each(pageBean.list, function (index, route) {
+                    routeLis += '<li>' +
+                            '<div class="img"><img src="' + route.rimage + '" style="width: 299px;;"></div>' +
+                            '<div class="text1">' +
+                            '<p>' + route.rname + '</p>' +
+                            '<br/>' +
+                            '<p>' + route.routeIntroduce + '</p>' +
+                            '</div>' +
+                            '<div class="price">' +
+                            '<p class="price_num">' +
+                            '<span>&yen;</span>' +
+                            '<span>' +route.price + '</span>' +
+                            '<span>起</span>' +
+                            '</p>' +
+                            '<p><a href="route_detail.html">查看详情</a></p>' +
+                            '</div>' +
+                            '</li>';
+                });
+                $("#route-list").html(routeLis);
+
+
+                var pageContrlLis = "";
+                var firstLi = '<li><a href="">首页</a></li>';
+                var preLi = '<li class="threeword"><a href="#">上一页</a></li>';
+                pageContrlLis += firstLi;
+                pageContrlLis += preLi;
+
+                // 前5后4 页码控制器逻辑
+                var begin, end;
+                if (pageBean.totalPage <= 10) {
+                    begin = 1;
+                    end = pageBean.totalPage;
+                } else {
+                    begin = pageBean.currentPage - 5;
+                    end = pageBean.currentPage + 4;
+
+                    if (begin < 1) {
+                        begin = 1;
+                        end = begin + 9;
+                    }
+
+                    if (end > pageBean.totalPage) {
+                        end = pageBean.totalPage;
+                        begin = end - 9;
+                    }
+                }
+
+
+                for (var i = begin; i <= end; i++) {
+                    // 设置选中状态
+                    var li = "";
+                    if (i == pageBean.currentPage) {
+                        li = '<li class="curPage" onclick="load('+ cid + ', ' + i + ');"><a href="javascript:void(0);">' + i + '</a></li>';
+                    } else {
+                        li = '<li onclick="load('+ cid + ', ' + i + ');"><a href="javascript:void(0);">' + i + '</a></li>';
+                    }
+
+                    pageContrlLis += li;
+                }
+
+                var nextLi = ' <li class="threeword"><a href="javascript:;">下一页</a></li>';
+                var lastLi = '<li class="threeword"><a href="javascript:;">末页</a></li>';
+                pageContrlLis += nextLi;
+                pageContrlLis += lastLi;
+
+                $("#page-control").html(pageContrlLis);
+
+                // 滚动到顶部
+                window.scrollTo(0, 0);
+            });
+
+
+        }
+
+
+
+
+    </script>
+
 </head>
+
 <body>
 <!--引入头部-->
 <div id="header"></div>
@@ -25,7 +129,7 @@
                         <span>商品信息</span>
                         <span class="jg">价格</span>
                     </div>
-                    <ul>
+                    <ul id="route-list">
                         <li>
                             <div class="img"><img src="images/04-search_03.jpg" alt=""></div>
                             <div class="text1">
@@ -157,10 +261,10 @@
                     </ul>
                     <div class="page_num_inf">
                         <i></i> 共
-                        <span>12</span>页<span>132</span>条
+                        <span id="total-page">12</span>页<span id="total-size">132</span>条
                     </div>
                     <div class="pageNum">
-                        <ul>
+                        <ul id="page-control">
                             <li><a href="">首页</a></li>
                             <li class="threeword"><a href="#">上一页</a></li>
                             <li><a href="#">1</a></li>
