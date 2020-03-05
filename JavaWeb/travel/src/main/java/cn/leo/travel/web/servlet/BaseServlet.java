@@ -1,5 +1,7 @@
 package cn.leo.travel.web.servlet;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -38,6 +40,12 @@ public class BaseServlet extends HttpServlet {
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
+    }
 
+    protected void writeValue(HttpServletResponse response, Object obj) throws IOException {
+
+        response.setContentType("applciation/json;charset=utf-8");
+
+        new ObjectMapper().writeValue(response.getOutputStream(), obj);
     }
 }

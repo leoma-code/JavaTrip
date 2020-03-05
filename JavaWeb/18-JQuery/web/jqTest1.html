@@ -5,22 +5,51 @@
     <title>1-快速入门</title>
 
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-confirm.js"></script>
 </head>
 <body>
 
     <div id="div1">div1...</div>
     <div id="div2">div2...</div>
 
-
+    <input id="show" type="button" value="弹窗"/>
 </body>
 
 <script>
 
-    var div = $("#div1");
-    alert(div.html());
+//    var div = $("#div1");
+//    alert(div.html());
+//
+//    var div2 = $("#div2");
+//    alert(div2.html());
 
-    var div2 = $("#div2");
-    alert(div2.html());
+    $(function () {
+
+        $("#show").click(function () {
+
+            $.confirm({
+                title: 'What is up?',
+                content: 'Here goes a little content',
+                type: 'green',
+                buttons: {
+                    ok: {
+                        text: "ok!",
+                        btnClass: 'btn-primary',
+                        keys: ['enter'],
+                        action: function(){
+                            console.log('the user clicked confirm');
+                        }
+                    },
+                    cancel: function(){
+                        console.log('the user clicked cancel');
+                    }
+                }
+            });
+
+        });
+
+
+    });
 
 </script>
 

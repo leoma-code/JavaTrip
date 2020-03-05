@@ -16,6 +16,13 @@ public interface RouteService {
      * @param pageSize
      * @return
      */
-    public PageBean<Route> queryRoutes(int cid, int currentPage, int pageSize);
+    public PageBean<Route> queryRoutes(int cid, String rname, int currentPage, int pageSize);
+
+    /**
+     * 查询一条线路信息
+     * @param rid
+     * @return
+     */
+    public Route findOne(int rid);
 
 }

@@ -35,6 +35,8 @@ public class RouteServlet extends BaseServlet {
         String currentPageStr = req.getParameter("currentPage");
         String pageSizeStr = req.getParameter("pageSize");
 
+        String rname = req.getParameter("rname");
+
         int cid = 0;
         if (cidStr != null && cidStr.length() > 0) {
             cid = Integer.parseInt(cidStr);
@@ -50,9 +52,24 @@ public class RouteServlet extends BaseServlet {
             pageSize = Integer.parseInt(pageSizeStr);
         }
 
-        PageBean<Route> routePageBean = routeService.queryRoutes(cid, currentPage, pageSize);
+        PageBean<Route> routePageBean = routeService.queryRoutes(cid, rname, currentPage, pageSize);
 
         resp.setContentType("application/json;charset=utf-8");
         new ObjectMapper().writeValue(resp.getOutputStream(), routePageBean);
+    }
+
+
+    /**
+     * 查询一条旅游线路纤细
+     * @param req
+     * @param res
+     */
+    public void findOne(HttpServletRequest req, HttpServletResponse res) throws IOException {
+
+        String rid = req.getParameter("rid");
+
+        Route route = routeService.findOne(Integer.parseInt(rid));
+
+        writeValue(res, route);
     }
 }

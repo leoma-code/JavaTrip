@@ -9,24 +9,31 @@
     <link rel="stylesheet" type="text/css" href="css/common.css">
     <link rel="stylesheet" href="css/search.css">
     <script src="js/jquery-3.3.1.js"></script>
-
+    <script src="js/getParameter.js"></script>
     <script>
 
         $(function () {
 
             // 获取参数字符串
-            var search = location.search; //?cid=5
+//            var search = location.search; //?cid=5
             // 获取cid
-            var cid = search.split("=")[1];
+//            var cid = search.split("=")[1];
 
-            load(cid);
 
+            var cid = getParameter("cid");
+            var rname = getParameter("rname");
+
+            if (rname) {
+                rname = decodeURIComponent(rname);
+            }
+
+            load(cid, rname);
         });
 
 
-        function load(cid, currentPage) {
+        function load(cid, rname,  currentPage) {
 
-            $.post("route/pageQuery", {cid: cid, currentPage: currentPage}, function(pageBean) {
+            $.post("route/pageQuery", {cid: cid, rname: rname, currentPage: currentPage}, function(pageBean) {
 
                 $("#total-page").html(pageBean.totalPage);
                 $("#total-size").html(pageBean.totalSize);
@@ -47,7 +54,7 @@
                             '<span>' +route.price + '</span>' +
                             '<span>起</span>' +
                             '</p>' +
-                            '<p><a href="route_detail.html">查看详情</a></p>' +
+                            '<p><a href="route_detail.html?rid=' + route.rid + '">查看详情</a></p>' +
                             '</div>' +
                             '</li>';
                 });
@@ -85,9 +92,9 @@
                     // 设置选中状态
                     var li = "";
                     if (i == pageBean.currentPage) {
-                        li = '<li class="curPage" onclick="load('+ cid + ', ' + i + ');"><a href="javascript:void(0);">' + i + '</a></li>';
+                        li = '<li class="curPage" onclick="javascript:load('+ cid + ', '+ rname +', ' + i + ');"><a href="javascript:void(0);">' + i + '</a></li>';
                     } else {
-                        li = '<li onclick="load('+ cid + ', ' + i + ');"><a href="javascript:void(0);">' + i + '</a></li>';
+                        li = '<li onclick="javascript:load('+ cid + ', ' + rname + ' ,' + i + ');"><a href="javascript:void(0);">' + i + '</a></li>';
                     }
 
                     pageContrlLis += li;
@@ -106,8 +113,6 @@
 
 
         }
-
-
 
 
     </script>
