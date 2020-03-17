@@ -49,4 +49,10 @@
     <select id="findTotal" resultType="INT">
         SELECT COUNT(id) FROM user;
     </select>
+
+    <!--根据QueryVO模糊查询-->
+    <select id="findByVO" parameterType="com.leo.domain.QueryVO" resultType="com.leo.domain.User">
+        SELECT * FROM user WHERE username LIKE #{user.username}
+    </select>
+
 </mapper>

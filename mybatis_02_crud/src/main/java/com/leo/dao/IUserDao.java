@@ -1,5 +1,6 @@
 package com.leo.dao;
 
+import com.leo.domain.QueryVO;
 import com.leo.domain.User;
 
 import java.util.List;
@@ -36,4 +37,11 @@ public interface IUserDao {
      * @return
      */
     int findTotal();
+
+    /**
+     * 根据VO查询
+     * @param vo
+     * @return
+     */
+    List<User> findByVO(QueryVO vo);
 }

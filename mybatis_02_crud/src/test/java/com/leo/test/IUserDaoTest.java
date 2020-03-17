@@ -1,6 +1,7 @@
 package com.leo.test;
 
 import com.leo.dao.IUserDao;
+import com.leo.domain.QueryVO;
 import com.leo.domain.User;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
@@ -136,5 +137,23 @@ public class IUserDaoTest {
     public void testFindTotal() {
         int total = userDao.findTotal();
         System.out.println(total);
+    }
+
+    /**
+     * 根据QueryVO模糊查询用户
+     */
+    @Test
+    public void testFindByVO() {
+
+        QueryVO vo = new QueryVO();
+        User user1 = new User();
+        user1.setUsername("%王%");
+        vo.setUser(user1);
+
+        List<User> users = userDao.findByVO(vo);
+        
+        for (User user : users) {
+            System.out.println(user);
+        }
     }
 }
