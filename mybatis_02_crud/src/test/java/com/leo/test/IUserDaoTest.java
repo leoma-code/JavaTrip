@@ -82,4 +82,27 @@ public class IUserDaoTest {
         userDao.saveUser(user);
     }
 
+    /**
+     * 测试修改
+     */
+    @Test
+    public void testUpdate() {
+        User user = new User();
+        user.setId(50);
+        user.setUsername("test update");
+        user.setAddress("中国");
+        user.setSex("男");
+        user.setBirthday(new Timestamp(new Date().getTime()));
+
+        userDao.updateUser(user);
+    }
+
+    /**
+     * 测试删除
+     */
+    @Test
+    public void testDelete() {
+
+        userDao.deleteUser(50);
+    }
 }

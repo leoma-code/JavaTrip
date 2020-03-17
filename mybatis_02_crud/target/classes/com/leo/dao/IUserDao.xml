@@ -18,4 +18,12 @@
         VALUES
         (#{username}, #{address}, #{sex}, #{birthday});
     </insert>
+
+    <update id="updateUser" parameterType="com.leo.domain.User" >
+        UPDATE user SET username=#{username} WHERE id=#{id};
+    </update>
+
+    <delete id="deleteUser" parameterType="Integer">
+        DELETE FROM user WHERE id = #{id};
+    </delete>
 </mapper>
