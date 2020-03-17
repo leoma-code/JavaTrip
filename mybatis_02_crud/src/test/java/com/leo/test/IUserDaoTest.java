@@ -79,7 +79,11 @@ public class IUserDaoTest {
         user.setSex("男");
         user.setBirthday(new Timestamp(new Date().getTime()));
 
+        System.out.println("保存之前 ：" + user);
+
         userDao.saveUser(user);
+
+        System.out.println("保存之后 ：" + user);
     }
 
     /**

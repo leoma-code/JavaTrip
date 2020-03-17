@@ -12,6 +12,15 @@
 
     <!--保存用户-->
     <insert id="saveUser" parameterType="com.leo.domain.User">
+        <!-- 获取保存的用户id 并复制给user参数
+            keyProperty 属性名
+            keyColumn 表对应列名
+            resultType 返回类型
+            order AFTER 执行之后获取
+        -->
+        <selectKey keyProperty="id" keyColumn="id" resultType="int" order="AFTER">
+            select last_insert_id();
+        </selectKey>
         INSERT INTO
         user
         (username, address, sex, birthday)
