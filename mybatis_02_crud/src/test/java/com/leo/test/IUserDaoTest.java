@@ -105,4 +105,32 @@ public class IUserDaoTest {
 
         userDao.deleteUser(50);
     }
+
+    /**
+     * 根据用户ID查询用户
+     */
+    @Test
+    public void testFindById() {
+
+        User user = userDao.findById(48);
+        System.out.println(user);
+    }
+
+    /**
+     * 根据用户姓名模糊查询用户
+     */
+    @Test
+    public void testFindByName() {
+
+        List<User> users = userDao.findByName("%王%");
+        for (User user : users) {
+            System.out.println(user);
+        }
+    }
+
+    @Test
+    public void testFindTotal() {
+        int total = userDao.findTotal();
+        System.out.println(total);
+    }
 }

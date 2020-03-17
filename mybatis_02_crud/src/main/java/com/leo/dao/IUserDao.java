@@ -21,4 +21,19 @@ public interface IUserDao {
     void updateUser(User user);
 
     void deleteUser(Integer userId);
+
+    User findById(Integer uid);
+
+    /**
+     * 根据用户名模糊查询
+     * @param username
+     * @return
+     */
+    List<User> findByName(String username);
+
+    /**
+     * 查询所有记录数
+     * @return
+     */
+    int findTotal();
 }
