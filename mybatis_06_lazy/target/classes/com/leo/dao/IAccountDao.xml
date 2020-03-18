@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.leo.dao.IAccountDao">
+    
+    <resultMap id="accountUserMap" type="account">
+        <id property="id" column="id"></id>
+        <result property="uid" column="uid"/>
+        <result property="money" column="money" />
+        <!-- 一对一的关系映射，配置封装user的内容  延迟加载User 在使用时再查询
+            property 关联的属性名
+            column   获取user的依赖列
+            select 查询用的唯一标识
+        -->
+        <association property="user" column="uid" javaType="User" select="com.leo.dao.IUserDao.findById"></association>
+    </resultMap>
+    
+    
+    <!--查询所有并包含用户信息 ：二-->
+    <select id="findAll" resultMap="accountUserMap">
+        SELECT * FROM account
+    </select>
+
+    <select id="findAccountByUid" resultType="Account">
+        select * from account where uid = #{uid}
+    </select>
+
+
+</mapper>
