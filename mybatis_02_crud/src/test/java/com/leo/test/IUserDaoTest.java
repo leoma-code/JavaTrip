@@ -151,7 +151,7 @@ public class IUserDaoTest {
         vo.setUser(user1);
 
         List<User> users = userDao.findByVO(vo);
-        
+
         for (User user : users) {
             System.out.println(user);
         }
