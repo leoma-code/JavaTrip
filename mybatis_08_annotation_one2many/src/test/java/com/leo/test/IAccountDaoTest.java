@@ -1,7 +1,7 @@
 package com.leo.test;
 
-import com.leo.dao.IUserDao;
-import com.leo.domain.User;
+import com.leo.dao.IAccountDao;
+import com.leo.domain.Account;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -17,11 +17,11 @@ import java.util.List;
  * Created by Leo on 2020/3/18.
  * Description :
  */
-public class IUserDaoTest {
+public class IAccountDaoTest {
 
     private InputStream is;
     private SqlSession sqlSession;
-    private IUserDao userDao;
+    private IAccountDao accountDao;
 
 
     @Before
@@ -32,7 +32,7 @@ public class IUserDaoTest {
 
         sqlSession = sessionFactory.openSession();
 
-        userDao = sqlSession.getMapper(IUserDao.class);
+        accountDao = sqlSession.getMapper(IAccountDao.class);
     }
 
     @After
@@ -48,19 +48,13 @@ public class IUserDaoTest {
 
     @Test
     public void testFindAll() {
-        List<User> users = userDao.findAll();
+        List<Account> accounts = accountDao.findAll();
 
-        for (User user : users) {
-            System.out.println(user);
-            System.out.println(user.getAccounts());
+        for (Account account : accounts) {
+            System.out.println(account);
         }
     }
 
-    @Test
-    public void testFindUserById() {
-        User user = userDao.findUserById(41);
-        System.out.println(user);
-//        System.out.println(user.getAccounts());
-    }
+
 
 }

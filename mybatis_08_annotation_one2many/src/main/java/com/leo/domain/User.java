@@ -2,6 +2,7 @@ package com.leo.domain;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by Leo on 2020/3/18.
@@ -14,6 +15,9 @@ public class User implements Serializable {
     private Date userBirthday;
     private String userSex;
     private String userAddress;
+
+    // 一对多映射
+    private List<Account> accounts;
 
     public Integer getUserId() {
         return userId;
@@ -53,6 +57,14 @@ public class User implements Serializable {
 
     public void setUserAddress(String userAddress) {
         this.userAddress = userAddress;
+    }
+
+    public List<Account> getAccounts() {
+        return accounts;
+    }
+
+    public void setAccounts(List<Account> accounts) {
+        this.accounts = accounts;
     }
 
     @Override

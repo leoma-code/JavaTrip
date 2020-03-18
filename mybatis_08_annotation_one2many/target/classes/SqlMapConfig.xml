@@ -8,6 +8,12 @@
     <!-- 引入外部配置文件 -->
     <properties resource="jdbcConfig.properties" />
 
+    <!-- mybatis 支持延迟加载配置-->
+    <!--<settings>-->
+        <!--<setting name="lazyLoadingEnabled" value="true"/>-->
+        <!--<setting name="aggressiveLazyLoading" value="false"/>-->
+    <!--</settings>-->
+
     <!-- 设置domain包中类的别名 -->
     <typeAliases>
         <package name="com.leo.domain" />
