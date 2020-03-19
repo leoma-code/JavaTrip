@@ -3,8 +3,10 @@ package com.leo.ioc;
 import com.leo.ioc.domain.Account;
 import com.leo.ioc.service.IAccountService;
 import org.junit.Test;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.util.List;
 
@@ -12,14 +14,17 @@ import java.util.List;
  * Created by Leo on 2020/3/19.
  * Description :
  */
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = "classpath:bean.xml")
 public class AccountServiceTest {
+
+    @Autowired
+    private IAccountService accountService;
 
 
     @Test
     public void testFindAll() {
-        ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
-
-        IAccountService accountService = ac.getBean("accountServiceImpl", IAccountService.class);
 
         List<Account> accounts = accountService.findAll();
 
@@ -31,9 +36,6 @@ public class AccountServiceTest {
 
     @Test
     public void testFindOne() {
-        ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
-
-        IAccountService accountService = ac.getBean("accountServiceImpl", IAccountService.class);
 
         Account account = accountService.findById(1);
 
@@ -42,9 +44,6 @@ public class AccountServiceTest {
 
     @Test
     public void testSave() {
-        ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
-
-        IAccountService accountService = ac.getBean("accountService", IAccountService.class);
 
         Account account = new Account();
         account.setName("test1");
@@ -55,9 +54,6 @@ public class AccountServiceTest {
 
     @Test
     public void testUpdate() {
-        ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
-
-        IAccountService accountService = ac.getBean("accountService", IAccountService.class);
 
         Account account = new Account();
         account.setId(4);
@@ -69,10 +65,6 @@ public class AccountServiceTest {
 
     @Test
     public void testDele() {
-
-        ApplicationContext ac = new ClassPathXmlApplicationContext("bean.xml");
-
-        IAccountService accountService = ac.getBean("accountService", IAccountService.class);
 
         accountService.deleAccount(4);
     }

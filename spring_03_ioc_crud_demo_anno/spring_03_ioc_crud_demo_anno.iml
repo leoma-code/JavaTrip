@@ -26,6 +26,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-core:5.1.9.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-jcl:5.1.9.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:5.1.9.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-test:5.1.9.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.32" level="project" />
     <orderEntry type="library" name="Maven: commons-dbutils:commons-dbutils:1.4" level="project" />
     <orderEntry type="library" name="Maven: c3p0:c3p0:0.9.1.1" level="project" />

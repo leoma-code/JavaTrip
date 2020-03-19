@@ -12,7 +12,7 @@ import java.util.List;
  * Created by Leo on 2020/3/19.
  * Description :
  */
-@Service
+@Service("accountService")
 public class AccountServiceImpl implements IAccountService {
 
     @Autowired
