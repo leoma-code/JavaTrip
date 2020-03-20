@@ -22,13 +22,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
+        <module name="fileupload_server" />
         <module name="springmvc_01_quickstart" />
         <module name="springmvc_02_response" />
+        <module name="springmvc_03_fileupload" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="fileupload_server" target="1.7" />
       <module name="springmvc_01_quickstart" target="1.8" />
       <module name="springmvc_02_response" target="1.8" />
+      <module name="springmvc_03_fileupload" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

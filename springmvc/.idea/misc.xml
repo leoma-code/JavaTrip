@@ -4,14 +4,18 @@
     <entry_points version="2.0" />
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/fileupload_server" />
     <file type="web" url="file://$PROJECT_DIR$/springmvc_01_quickstart" />
     <file type="web" url="file://$PROJECT_DIR$/springmvc_02_response" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc_03_fileupload" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/springmvc_01_quickstart/pom.xml" />
         <option value="$PROJECT_DIR$/springmvc_02_response/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_03_fileupload/pom.xml" />
+        <option value="$PROJECT_DIR$/fileupload_server/pom.xml" />
       </list>
     </option>
   </component>
