@@ -5,11 +5,13 @@
   </component>
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$/springmvc_01_quickstart" />
+    <file type="web" url="file://$PROJECT_DIR$/springmvc_02_response" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/springmvc_01_quickstart/pom.xml" />
+        <option value="$PROJECT_DIR$/springmvc_02_response/pom.xml" />
       </list>
     </option>
   </component>
