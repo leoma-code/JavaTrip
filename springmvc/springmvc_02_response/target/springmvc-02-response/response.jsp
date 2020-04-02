@@ -20,9 +20,9 @@
                 $.ajax({
                     url: "user/testAjax",
                     contentType: "application/json;charset=utf-8",
-                    data: '{"username":"张三","age":"18"}',
+                    data: {"username":'"zhangsan"',"age":"18"},
                     dataType: "json",
-                    type: "post",
+                    type: "get",
                     success: function (data) {
 
                         alert(data);

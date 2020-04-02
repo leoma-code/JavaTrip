@@ -22,7 +22,7 @@
                     contentType: "application/json;charset=utf-8",
                     data: '{"username":"张三","age":"18"}',
                     dataType: "json",
-                    type: "post",
+                    type: "z",
                     success: function (data) {
 
                         alert(data);
