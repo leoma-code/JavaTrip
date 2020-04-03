@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>v-on:keydown</title>
+		<script src="js/vuejs-2.5.16.js"></script>
+	</head>
+
+	<body>
+		<div id="app">
+			Vue: <input type="text" v-on:keydown="fun($event)">
+			<hr/>
+			传统JS: <input type="text" onkeydown="showKeyCode()">
+		</div>
+	</body>
+	<script>
+		//view model
+		new Vue({
+			el: "#app",
+			methods: {
+				fun: function (event) {
+					var keyCode = event.keyCode;
+					// 设置键盘只允许输入数字
+					if (keyCode < 48 || keyCode > 57) {
+						event.preventDefault();
+						alert("只允许输入数字");
+					}
+				}
+			}
+		});
+
+
+		// 传统js 展示按键的Code
+		function showKeyCode() {
+			// 键盘 0 -> 48 9 -> 57
+			var keyCode = event.keyCode;
+//			alert(keyCode);
+			// 设置键盘只允许输入数字
+			if (keyCode < 48 || keyCode > 57) {
+				event.preventDefault();
+				alert("只允许输入数字");
+			}
+		}
+	</script>
+	
+	
+
+</html>

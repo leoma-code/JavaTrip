@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>v-on:事件修饰符</title>
+
+		<script src="js/vuejs-2.5.16.js"></script>
+	</head>
+
+	<body>
+		传统方式阻止表单提交
+		<div>
+			<form action="https://www.baidu.com" method="post" onsubmit="return checkForm()">
+				<input type="submit" value="提交"/>
+			</form>
+		</div>
+	<hr/>
+		Vue阻止表单提交
+		<div id="app">
+			<form action="https://www.baidu.com" method="post" @submit.prevent>
+				<input type="submit" value="提交"/>
+			</form>
+		</div>
+	</body>
+	<script>
+		//view model
+		new Vue({
+			el: "#app",
+			methods: {}
+		});
+		
+		// 传统方式阻止表单提交
+		function checkForm() {
+			return false;
+		}
+
+	</script>
+
+</html>
